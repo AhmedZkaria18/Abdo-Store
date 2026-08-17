@@ -29,7 +29,7 @@ const SignUp = () => {
     //   await auth.
       setInput(initialState);
       // history.push('/');
-      history.push('/ReactEcommerceAccount'); 
+      history.push('/account'); 
       // db.collection("Cart Items").
     } catch(error){
       setError(error.message);
@@ -81,7 +81,7 @@ const SignUp = () => {
         <p className="form__error">{error}</p>
       </form>
       <p>
-        Already a user? <Link to="/ReactEcommerceLogin">Log In</Link>
+        Already a user? <Link to="/login">Log In</Link>
       </p>
     </div>
     </div>

@@ -155,16 +155,16 @@ function ShopingCart() {
                             .update({
                                 [sizeChange] : cartItem.storeAmount - cartItem.amount, 
                             })
-                            .then(() => { console.log("user with id aUserUid updated"); })
-                            .catch(error => { console.log("Error getting document:", error); }); 
+                            .then(() => { /*console.log("user with id aUserUid updated");*/ })
+                            .catch(error => { /*console.log("Error getting document:", error);*/ }); 
                             
                             ( cartItem.totId ) &&
                             db.collection(`User-${user.email}`).doc(`${cartItem.id}`)
                             .update({
                                 storeAmount: cartItem.storeAmount - cartItem.amount
                             })
-                            .then(() => { console.log("user with id aUserUid updated"); })
-                            .catch(error => { console.log("Error getting document:", error); }); 
+                            .then(() => { /*console.log("user with id aUserUid updated");*/ })
+                            .catch(error => { /*console.log("Error getting document:", error);*/ }); 
 
                             // to update customer in customers collection with lastBuy from last item in cart, lastBuyItem (last item in current cart) || checkedCustomer?.lastBuy(last item was in current cart before empty)
                             updateCustomer(checkedCustomer?.id, {

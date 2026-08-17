@@ -9,7 +9,7 @@ function NewSection_figure({preload}) {
                 src={`${preload[0]}`}
             />
             <Figure.Caption className={'h5'}> {preload[1]} <span>{preload[2]}</span></Figure.Caption>
-            <Link to={`/ReactEcommerceTest/${preload[3]}`} target={'_blank'} className={'text-center'}>Shop now</Link> 
+            <Link to={`/details/${preload[3]}`} target={'_blank'} className={'text-center'}>Shop now</Link> 
         </Figure>
     )
 }
