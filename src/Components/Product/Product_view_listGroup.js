@@ -7,18 +7,18 @@ function Product_view_listGroup({preload, cTg, sizesCount}) {
         let sibList1 = document.querySelectorAll(String);        
         sibList1[Number].classList.add("checked");
         sibList1[Number].classList.remove("unChecked");    
-        console.log( sibList1[Number] );   
+        // console.log( sibList1[Number] );   
     }
 
     const clickChecker = (String, Number) => {
         let sibList = document.querySelectorAll(String);
-        console.log( sibList[Number] );
+        // console.log( sibList[Number] );
         sibList[Number].onClick = handelClickListner(String, Number);
         for(var i=0; i<sibList.length; i++){
             if( i != Number ){
                 sibList[i].classList.add("unChecked");
                 sibList[i].classList.remove("checked");
-                console.log( sibList[i] );
+                // console.log( sibList[i] );
             }
         }
     }

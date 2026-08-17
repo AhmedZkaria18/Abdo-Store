@@ -8,7 +8,7 @@
     .row{
         @media (max-width: 992px) { justify-content: space-evenly; }
         &>div{            
-            &:nth-of-type(1){ .card{ background-image: url("https://cf3.s3.souqcdn.com/item/2016/07/14/11/10/37/60/item_XL_11103760_15308200.jpg"); } }
+            &:nth-of-type(1){ .card{ background-image: url("https://img-lcwaikiki.mncdn.com/mnresize/1020/1360/pim/productimages/20231/6790659/v1/l_20231-s3kq42z8-lqq_u2.jpg"); } }
             &:nth-of-type(2){ .card{ background-image: url("https://static.turbosquid.com/Preview/001307/924/HJ/_600.jpg"); } }
             &:nth-of-type(3){ .card{ background-image: url("https://image.shutterstock.com/image-photo/portrait-cute-children-on-light-260nw-1501231889.jpg"); } }           
             @media (max-width: 992px) { &:nth-of-type(-n+2){ margin-bottom: 2.0rem; } }

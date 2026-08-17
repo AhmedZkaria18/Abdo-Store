@@ -43,14 +43,14 @@ function Home (){
             </Container>
         </section>
 
-        <section id="videoSection">
+        {/*<section id="videoSection">
             <p className={'text-center text-muted'}> Graduation Project from Institute 2020 - MIS </p>
             <video  controls autoPlay poster={headerPh}>
                 <source src={vd1} type="video/mp4"></source>
-                {/* <source src={vd2} type="video/ogv"></source> */}
-                {/* Your browser doesn't support video tag */}
+                // <source src={vd2} type="video/ogv"></source> //
+                // Your browser doesn't support video tag //
             </video>
-        </section>
+        </section>*/}
 
         <section id="addsSection">
             <img src="https://souqcms.s3.eu-west-1.amazonaws.com/sanfronto/eg/2020/web/Banners/HPs/Apr/SellonSouq-HP-Strip-en.jpg" className="img-fluid"/>
@@ -62,7 +62,7 @@ function Home (){
                 <Col lg={6} md={9} sm={12}>
                 {
                     monthlySale.map( (monthlySaleItem, index) => ( index === 0 ) &&
-                    <Figure as={Link} to={`/ReactEcommerceTest/${monthlySaleItem.id}`}>
+                    <Figure as={Link} to={`/details/${monthlySaleItem.id}`}>
                         <Figure.Image  src={`${monthlySaleItem.images[0]}`} style={{ width: '70%' }}/>
                         <Figure.Caption> 
                             <h3 className={'text-center'}>{monthlySaleItem.title}</h3> 
@@ -102,14 +102,14 @@ function Home (){
             <Carousel.Item>
                 <HomeCarouselItem  preload={[
                     "Everybody is different, which is why we offer styles for every body. Laborum fuga incidunt laboriosam voluptas iure, delectus dignissimos facilis neque nulla earum."
-                    , "https://upload.wikimedia.org/wikipedia/commons/a/a0/Arh-avatar.jpg"
+                    , "https://kehrer24.de/wp-content/uploads/2021/05/bearded-man-icon-64.png"
                     , "Petey Cruiser", "Designer at colorlib"
                 ]} />
             </Carousel.Item>
             <Carousel.Item>
                 <HomeCarouselItem  preload={[
                     "Everybody is different, which is why we offer styles for every body. Laborum fuga incidunt laboriosam voluptas iure, delectus dignissimos facilis neque nulla earum."
-                    , "https://365psd.com/images/istock/previews/9730/97305669-avatar-icon-of-girl-in-a-baseball-cap.jpg"
+                    , "https://static.vecteezy.com/system/resources/previews/014/212/681/non_2x/female-user-profile-avatar-is-a-woman-a-character-for-a-screen-saver-with-emotions-for-website-and-mobile-app-design-illustration-on-a-white-isolated-background-vector.jpg"
                     , "Laila Hassan", "Developer at colorlib"
                 ]} />
             </Carousel.Item>

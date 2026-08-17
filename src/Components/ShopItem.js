@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 function ShopItem( props ) { 
     return (
-        <Link to={`/ReactEcommerceTest/${props.indx}`} as={Figure}  className={`shop_container_item text-center ${[...props.inf]}`}>
+        <Link to={`/details/${props.indx}`} as={Figure}  className={`shop_container_item text-center ${[...props.inf]}`}>
             <Figure.Image src={props.ing} />
             <Figure.Caption> 
                 <h5>{props.int}</h5>

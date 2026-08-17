@@ -116,7 +116,7 @@ function UseFirestore() {
     // Shoping cart delete item 
     const handelDeleteItem = (String) => { 
         db.collection(`User-${user.email}`).doc(String).delete().then(() => {
-            console.log("Document successfully deleted!");
+            // console.log("Document successfully deleted!");
         }).catch((error) => { console.error("Error removing document: ", error); });
     }
     // Shoping cart delete item 
@@ -126,13 +126,13 @@ function UseFirestore() {
         (opr === '+') ?
             db.collection(`User-${user.email}`).doc(`${rnd}`)
             .update({ amount: `${ (Number+1 >= lmt) ? lmt : Number+1 }` })
-            .then(() => { console.log(`doc with id : ${rnd} updated`); })
-            .catch(error => { console.log(`Error getting document : ${rnd}`, error); })
+            .then(() => { /*console.log(`doc with id : ${rnd} updated`);*/ })
+            .catch(error => { /*console.log(`Error getting document : ${rnd}`, error);*/ })
         : 
             db.collection(`User-${user.email}`).doc(`${rnd}`)
             .update({ amount: `${ (Number-1 <= lmt) ? lmt+1 : Number-1 }` })
-            .then(() => { console.log(`doc with id : ${rnd} updated`); })
-            .catch(error => { console.log(`Error getting document : ${rnd}`, error); });
+            .then(() => { /*console.log(`doc with id : ${rnd} updated`);*/ })
+            .catch(error => { /*console.log(`Error getting document : ${rnd}`, error);*/});
     } 
     // Shoping cart update item amount
 

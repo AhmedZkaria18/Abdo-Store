@@ -10,7 +10,7 @@ export const AuthProvider = ({children}) => {
         const unSubscribe = auth.onAuthStateChanged(user => {
             setUser(user);
             setLoading(false);
-            console.log(user);
+            // console.log(user);
         }) 
 
         return unSubscribe;

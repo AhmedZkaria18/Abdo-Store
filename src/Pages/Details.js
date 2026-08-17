@@ -11,7 +11,7 @@ import { db } from '../Firebase/FireConfig';
 
 let dt = new Date();
 
-const TestFire = () => {    
+const Details = () => {    
     
     let szar = [];
     let szarCount = [];
@@ -20,7 +20,7 @@ const TestFire = () => {
             if (Object.hasOwnProperty.call(it, key)) {
                 szar.push(key);
                 szarCount.push(it[key]);
-                console.log( key, it[key], szar );
+                // console.log( key, it[key], szar );
             }
         }
     }
@@ -34,9 +34,9 @@ const TestFire = () => {
     const ReadProduct = 
         window.location.href.substring( window.location.href.lastIndexOf("/")+1 , window.location.href.length );
     
-    console.log(
-        items.filter( function(item)  { return item.id === ReadProduct } )
-    ); 
+    // console.log(
+    //     items.filter( function(item)  { return item.id === ReadProduct } )
+    // ); 
 
     const updateCustomer = async(docId, customer) => {
         await db.collection('Customers').doc(docId).update({...customer});
@@ -152,9 +152,9 @@ const TestFire = () => {
                                 (item.id !== ReadProduct && item.filter === 'shirt') && 
                                 <Product_related_col key={index} preload={[`${item.id}`, `${item.images[0]}`, `${item.title}`, `${item.price}`]}/>
                             )}
-                        {/* <Product_related_col preload={["https://www.facebook.com/profile.php?id=100009428856148", "https://cf3.s3.souqcdn.com/item/2016/07/14/11/10/37/60/item_XL_11103760_15308200.jpg", "Sport shirt", "$24.00"]}/>
-                        <Product_related_col preload={["https://www.facebook.com/profile.php?id=100009428856148", "https://cf3.s3.souqcdn.com/item/2016/07/14/11/10/37/60/item_XL_11103760_15308200.jpg", "Sport shirt", "$24.00"]}/>
-                        <Product_related_col preload={["https://www.facebook.com/profile.php?id=100009428856148", "https://cf3.s3.souqcdn.com/item/2016/07/14/11/10/37/60/item_XL_11103760_15308200.jpg", "Sport shirt", "$24.00"]}/> */}
+                        {/* <Product_related_col preload={["https://www.facebook.com/profile.php?id=100009428856148", "https://img-lcwaikiki.mncdn.com/mnresize/1020/1360/pim/productimages/20231/6790659/v1/l_20231-s3kq42z8-lqq_u2.jpg", "Sport shirt", "$24.00"]}/>
+                        <Product_related_col preload={["https://www.facebook.com/profile.php?id=100009428856148", "https://img-lcwaikiki.mncdn.com/mnresize/1020/1360/pim/productimages/20231/6790659/v1/l_20231-s3kq42z8-lqq_u2.jpg", "Sport shirt", "$24.00"]}/>
+                        <Product_related_col preload={["https://www.facebook.com/profile.php?id=100009428856148", "https://img-lcwaikiki.mncdn.com/mnresize/1020/1360/pim/productimages/20231/6790659/v1/l_20231-s3kq42z8-lqq_u2.jpg", "Sport shirt", "$24.00"]}/> */}
                     </Row>
                 </Container>                             
             )
@@ -163,4 +163,4 @@ const TestFire = () => {
     )
 }
 
-export default TestFire
+export default Details

@@ -10,10 +10,10 @@ function Navbar() {
 
     return (
         <nav className={'navbar'} id="nav">
-            <Link to="/ReactEcommerceHome">Home</Link>            
-            <Link to="/ReactEcommerceShop">Shop</Link>    
-            <Link to="/ReactEcommerceShopingcart"><FontAwesomeIcon icon={faShoppingCart}/> <span>{ cartItems.length }</span> </Link>
-            <Link to="/ReactEcommerceAccount"><FontAwesomeIcon icon={faUser}/></Link>            
+            <Link to="/home">Home</Link>            
+            <Link to="/shop">Shop</Link>    
+            <Link to="/shopingcart"><FontAwesomeIcon icon={faShoppingCart}/> <span>{ cartItems.length }</span> </Link>
+            <Link to="/account"><FontAwesomeIcon icon={faUser}/></Link>            
         </nav>
 
     )

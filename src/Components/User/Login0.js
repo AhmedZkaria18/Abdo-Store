@@ -26,7 +26,7 @@ const Login = () => {
       // db.
       // db.collection()
       setInput(initialState);
-      history.push('/ReactEcommerceAccount');
+      history.push('/account');
     } catch(error){
       setError(error.message);
     }
@@ -113,7 +113,7 @@ const Login = () => {
       setCustomerInfo(null);
       setCheckedCustomer(null);
       setCustomersLength(null);
-      history.push('/ReactEcommerceAccount');
+      history.push('/account');
     }else{
       // this update to update lastBuy if customer exist in customers collection, not need to add to cart to update
       updateCustomer(checkedCustomer?.id, {
@@ -129,7 +129,7 @@ const Login = () => {
       setCustomerInfo(null);
       setCheckedCustomer(null);
       setCustomersLength(null);
-      history.push('/ReactEcommerceAccount');
+      history.push('/account');
     }
   };
 
@@ -175,7 +175,7 @@ const Login = () => {
         <p className="form__error">{error}</p>
       </form>
       <p>
-        Not a user? <Link to="/ReactEcommerceSignup">Sign Up</Link>
+        Not a user? <Link to="/signup">Sign Up</Link>
       </p>      
     </div>
     </div>

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './Components/Navbar';
-import TestFire from './Pages/TestFire';
+import Details from './Pages/Details';
 
 import PrivateRoute from './Auth/PrivateRoute';
 import Account from './Components/User/User';
@@ -17,10 +17,10 @@ import { useEffect } from 'react';
 function App() {
 
   useEffect(() => {
-        var nv = document.getElementsByClassName("navbar")[0];
-        var pr = document.getElementsByClassName("App")[0];
-        var trg = document.getElementsByClassName("beforeNav")[0];
-        pr.insertBefore(nv, trg);    
+    var nv = document.getElementsByClassName("navbar")[0];
+    var pr = document.getElementsByClassName("App")[0];
+    var trg = document.getElementsByClassName("beforeNav")[0];
+    pr.insertBefore(nv, trg);
   }, []);
 
   return (
@@ -29,13 +29,14 @@ function App() {
       <Navbar /> 
       <div className={'App'}>
         <Switch>
-          <Route path="/ReactEcommerceHome" exact component={Home} />
-          <Route path="/ReactEcommerceShop" component={Shop} />      
-          <Route path="/ReactEcommerceTest" component={TestFire} /> 
-          <PrivateRoute path="/ReactEcommerceAccount" exact component={Account}/>
-          <Route path="/ReactEcommerceLogin"  component={Login} />
-          <Route path="/ReactEcommerceSignup"  component={SignUp} />
-          <Route path="/ReactEcommerceShopingcart"  component={ShopingCart} />
+          <Route path="/" exact component={Home} />
+          <Route path="/home" component={Home} />
+          <Route path="/shop" component={Shop} />      
+          <Route path="/details" component={Details} /> 
+          <PrivateRoute path="/account" exact component={Account}/>
+          <Route path="/login"  component={Login} />
+          <Route path="/signup"  component={SignUp} />
+          <Route path="/shopingcart"  component={ShopingCart} />
         </Switch>
       </div>
       <Footer />
