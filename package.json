@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^4.6.0",
+    "cross-env": "^10.1.0",
     "dayjs": "^1.11.13",
     "firebase": "^8.6.5",
     "jquery": "^3.6.0",
@@ -21,8 +22,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "cross-env NODE_OPTIONS='--openssl-legacy-provider --max-old-space-size=4096' react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
